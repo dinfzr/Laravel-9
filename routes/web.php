@@ -31,5 +31,7 @@ use App\Http\Controllers\DinController;
 // });
 
 // Route::patch('')
-Route::get('/xx', [RegistrationController::class, 'index']);
-Route::post('/xx', [RegistrationController::class, 'store']);
+Route::get('/register', [RegistrationController::class, 'index']);
+Route::post('/register', [RegistrationController::class, 'register']);
+Route::get('/customer', [CustomerController::class, 'index']);
+Route::post('/customer', [CustomerController::class, 'store']);
