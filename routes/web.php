@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;    
-use App\Http\Controllers\DinController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +30,11 @@ use App\Http\Controllers\DinController;
 //     echo 'hello';
 // });
 
-// Route::patch('')
+Route::get('/', function () {
+    return view('index');
+});
 Route::get('/register', [RegistrationController::class, 'index']);
 Route::post('/register', [RegistrationController::class, 'register']);
+Route::get('/customer/create', [CustomerController::class, 'create']);
 Route::get('/customer', [CustomerController::class, 'index']);
 Route::post('/customer', [CustomerController::class, 'store']);
